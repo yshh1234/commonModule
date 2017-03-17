@@ -1,0 +1,379 @@
+.calendar {
+    padding: 0;
+    margin: 0;
+    border: none;
+    width: 7.5rem;
+    height: 5.6rem;
+    background-color: #ffffff;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    z-index: 10001;
+}
+
+.calendar-title {
+    word-spacing: 0.06rem;
+    width: 100%;
+    height: 0.8rem;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid #333333;
+}
+.calendar-title-content{
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 0.28rem;
+    line-height: 0.8rem;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.calendar-cancel {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0.8rem;
+    height: 0.8rem;
+    background: url("../img/close.png");
+    background-size: 0.8rem 0.8rem;
+    padding: 0;
+}
+
+.calendar-bar {
+    bottom: 0;
+    margin-bottom: 0;
+    width: 7.5rem;
+    height: 1.6rem;
+    padding: 0.4rem;
+    border-top: 1px solid #A0998E;
+    box-sizing: border-box;
+    background-color: #FAFAFA;
+}
+
+.calendar-today {
+    display: block;
+    height: 0.8rem;
+    font-size: 0.34rem;
+    line-height: 0.78rem;
+    background-color: #fff;
+    color: #A0998E;
+    border: 1px solid #A0998E;
+    border-radius: 0.1rem;
+    padding: 0;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-clip: padding-box;
+    box-sizing: content-box;
+    width: 3.1rem;
+    float: left;
+}
+
+.calendar-confirm {
+    float: right;
+    display: block;
+    height: 0.8rem;
+    font-size: 0.34rem;
+    line-height: 0.78rem;
+    border-radius: 0.1rem;
+    padding: 0;
+    text-align: center;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    background-clip: padding-box;
+    box-sizing: content-box;
+    width: 3.1rem;
+    background-color: #73CD0D;
+    color: #fff;
+    border: 1px solid #73CD0D;
+}
+
+.calendar-year div, .calendar-month div, .calendar-day div, .calendar-hour div, .calendar-min div, .calendar-divide div {
+    /*height: 1rem;*/
+    font-size: 0.4rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1rem;
+}
+
+.calendar-mask {
+    width: 7.5rem;
+    height: 100%;
+    position: fixed;
+    z-index: 10000;
+    background-color: rgba(0, 0, 0, 0.5);
+    bottom: 0;
+    display: none;
+}
+
+.calendar-line {
+    width: 7.5rem;
+    height: 3rem;
+    position: absolute;
+    display: block;
+    bottom: 1.8rem;
+    z-index: 10;
+    border-top: 1px solid #c3c3c3;
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0), rgba(255, 255, 255, 1));
+}
+
+.calendar-line-reddivide {
+    width: 100%;
+    height: 0.9rem;
+    border-bottom: 2px solid #FD3259;
+    margin-bottom: 0.1rem;
+}
+
+.calendar-line-hour {
+    width: 0.42rem;
+    margin-left: 0.7rem;
+    float: left;
+}
+
+.calendar-line-min {
+    width: 0.42rem;
+    margin-left: 0.28rem;
+    float: left;
+}
+.calendar-line-sigma{
+    width: 0.3rem;
+    float: left;
+    margin-left: 0.2rem;
+}
+
+.calendar-line-sigma div{
+    height: 1rem;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 1rem;
+    font-size: 0.4rem;
+}
+
+.calendar-touch {
+    z-index: 11;
+    width: 7.5rem;
+    height: 3.2rem;
+    position: absolute;
+    display: block;
+    bottom: 1.6rem;
+}
+.calendar-animate{
+    transition: 0.3s ;
+}
+.calendar-datetime {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    overflow: hidden;
+}
+.calendar-datetime .calendar-year {
+    width: 1.34rem;
+    margin-left: 0.3rem;
+    float: left;
+    /*transition: 1s;*/
+}
+
+.calendar-datetime .calendar-month {
+    margin-left: 0.2rem;
+    width: 1.04rem;
+    float: left;
+    /*transition: 1s;*/
+}
+
+.calendar-datetime .calendar-day {
+    margin-left: 0.2rem;
+    width: 1.04rem;
+    float: left;
+    /*transition: 1s;*/
+}
+
+.calendar-datetime .calendar-hour {
+    margin-left: 0.73rem;
+    width: 1.04rem;
+    float: left;
+    /*transition: 1s;*/
+}
+
+.calendar-datetime .calendar-min {
+    margin-left: 0.17rem;
+    width: 1.04rem;
+    float: left;
+    /*transition: 1s;*/
+}
+
+.calendar-datetime .calendar-line-date {
+    height: 3rem;
+    float: left;
+    width: 4.48rem;
+}
+
+.calendar-datetime .calendar-line-year {
+    width: 1.12rem;
+    margin-left: 0.41rem;
+    float: left;
+}
+
+.calendar-datetime .calendar-line-month {
+    width: 0.57rem;
+    margin-left: 0.56rem;
+    float: left;
+}
+
+.calendar-datetime .calendar-line-day {
+    width: 0.57rem;
+    margin-left: 0.64rem;
+    float: left;
+}
+
+.calendar-datetime .calendar-line-time {
+    height: 3rem;
+    float: left;
+    width: 2.9rem;
+}
+
+.calendar-datetime .calendar-line-divide {
+    margin-top: 0.3rem;
+    margin-left: 0;
+    height: 2.4rem;
+    position: absolute;
+    width: 4.48rem;
+    border-right: 1px solid #c7c7c7;
+}
+
+.calendar-datetime .touch-year {
+    float: left;
+    width: 1.81rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-datetime .touch-month {
+    float: left;
+    height: 3rem;
+    width: 1.19rem;
+    display: block;
+}
+
+.calendar-datetime .touch-day {
+    float: left;
+    width: 1.49rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-datetime .touch-hour {
+    float: left;
+    width: 1.52rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-datetime .touch-min {
+    float: left;
+    width: 1.49rem;
+    height: 3rem;
+    display: block;
+}
+
+/** date*/
+.calendar-date {
+    width: 100%;
+    height: 3rem;
+    background-color: white;
+    overflow: hidden;
+}
+
+.calendar-date .calendar-year {
+    margin-left: 0.3rem;
+    width: 2.3rem;
+    float: left;
+    transition: 0.3s;
+}
+
+.calendar-date .calendar-month {
+    width: 2.3rem;
+    float: left;
+    transition: 0.3s;
+}
+
+.calendar-date .calendar-day {
+    width: 2.3rem;
+    float: left;
+    transition: 0.3s;
+}
+
+.calendar-date .calendar-line-date {
+    height: 3rem;
+    float: left;
+    width: 7.5rem;
+}
+
+.calendar-date .calendar-line-year {
+    width: 1.12rem;
+    margin-left: 0.89rem;
+    float: left;
+}
+
+.calendar-date .calendar-line-month {
+    width: 0.57rem;
+    margin-left: 1.46rem;
+    float: left;
+}
+
+.calendar-date .calendar-line-day {
+    width: 0.57rem;
+    margin-left: 1.72rem;
+    float: left;
+}
+
+.calendar-date .touch-year {
+    float: left;
+    width: 2.5rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-date .touch-month {
+    float: left;
+    width: 2.5rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-date .touch-day {
+    float: left;
+    width: 2.5rem;
+    height: 3rem;
+    display: block;
+}
+
+.calendar-date .calendar-hour {
+    display: none;
+}
+
+.calendar-date .calendar-min {
+    display: none;
+}
+
+.calendar-date .calendar-line-time {
+    display: none;
+}
+
+.calendar-date .calendar-line-divide {
+    display: none;
+}
+
+.calendar-date .touch-hour {
+    display: none;
+}
+
+.calendar-date .touch-min {
+    display: none;
+}
